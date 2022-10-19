@@ -3,10 +3,6 @@
 int main() {
     // Declare variables
     int limestones=0;
-    float porosity;
-    float hydraulicConductivity;
-    float specificGravity;
-    int elements;
     int i, j;
     double gradient = 0.725;
     float area = 120000;
@@ -25,7 +21,7 @@ int main() {
     }
 
     // Determine limestone with lowest specific gravity
-    for(i = 0, j = 1; i < limestones, j < limestones; j += 1) {
+    for(i = 0, j = 1; j < limestones; j += 1) {
         double a = outputArray[i][2];
         double b = outputArray[j][2];
         if (b < a)
@@ -33,7 +29,7 @@ int main() {
     }
     printf("The limestone with the lowest specific gravity is Limestone %d with a specific gravity of %0.4lf.\n", i +1, outputArray[i][2]);
 
-    // Copy array to new arry creating a new column
+    // Copy array to new array creating a new column
     double array[limestones][4];
     // Copy the data
     for (i = 0; i<limestones; i +=1){
@@ -46,7 +42,7 @@ int main() {
     printf("Flow velocities:\n");
     for(i=0; i < limestones; i += 1) {
         array[i][3] = 10000*((array[i][1])*area*gradient);
-        printf("Limestones %d: %0.2lf cm^3/s\n", i+1, array[i][3]);
+        printf("Limestone %d: %0.2lf cm^3/s\n", i+1, array[i][3]);
     }
 
     // calc greatest velocity
@@ -78,6 +74,4 @@ int main() {
     else {
         printf("The rock with the highest porosity does not have the highest flow velocity.\n");
     }
-
-
 }
