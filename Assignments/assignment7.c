@@ -36,4 +36,4 @@ int main() {
     return 0;
     
     
-}
+}https://linuxhint.com/two-dimensional-array-malloc-c-programming/
