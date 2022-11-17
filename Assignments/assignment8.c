@@ -26,9 +26,9 @@ int main() {
     printf("Taylor Series Riemann Sum with 25 intervals: %0.2lf\n", getTaylorSum(leftBound, rightBound, 25));
     printf("Taylor Series Riemann Sum with 100 intervals: %0.2lf\n", getTaylorSum(leftBound, rightBound, 100));
     printf("--------------------------------------------------------\n");
-    printf("Error in Riemann Sums with 5 intervals: -%0.2lf%\n", error(leftBound, rightBound, 5));
-    printf("Error in Riemann Sums with 25 intervals: -%0.2lf%\n", error(leftBound, rightBound, 25));
-    printf("Error in Riemann Sums with 100 intervals: -%0.2lf%\n", error(leftBound, rightBound, 100));
+    printf("Error in Riemann Sums with 5 intervals: -%0.2lf%%\n", error(leftBound, rightBound, 5));
+    printf("Error in Riemann Sums with 25 intervals: -%0.2lf%%\n", error(leftBound, rightBound, 25));
+    printf("Error in Riemann Sums with 100 intervals: -%0.2lf%%\n", error(leftBound, rightBound, 100));
 }
 
 // Collect User input
