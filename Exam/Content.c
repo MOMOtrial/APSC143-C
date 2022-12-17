@@ -194,7 +194,8 @@ int main() {
     // strlen returns the length of the string (does not include the null character)
     // strlen(string);
     //------
-    //strcmp compares string 1 and string 2 and return 0 if they are the same <0 if string1 "comes before" string2, and >0 if string1 "comes after" string2
+    //strcmp compares string 1 and string 2 and return 0 if they are the same <0 
+    //^^if string1 "comes before" string2, and >0 if string1 "comes after" string2
     // strcmp(string1, string2);
     //     number of strings  | max size
     //    // char shopping list[3][10] = {"...", "..."}
