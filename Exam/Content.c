@@ -550,3 +550,17 @@ void getRowSums(int arrayToSum[ROWS][COLUMNS], int rowSums[]) {
         rowSums[i] = sum;
     }
 }
+
+// recursion
+void example(int n){
+    if(n<0){
+        return;
+    }
+    example(n-1);
+}
+
+float countCoins(float coins[], int numCoins) {
+    if(numCoins<=1)
+        return coins[numCoins-1];
+    return coins[numCoins-1]+countCoins(coins, numCoins-1);
+}
