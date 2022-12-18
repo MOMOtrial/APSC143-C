@@ -552,3 +552,99 @@ float countCoins(float coins[], int numCoins) {
         return coins[numCoins-1];
     return coins[numCoins-1]+countCoins(coins, numCoins-1);
 }
+
+
+#include <stdio.h>
+#include <math.h>
+
+int main() {
+    //500000.00 interest rate of %2 per year (0.02)
+    int years;
+    printf("How many years would you like to invest for?\n");
+    scanf("%d", &years);
+
+    float value = 500000*pow((1+0.02), years);
+    printf("%0.02f", value);
+}
+
+#include <stdio.h>
+int main() {
+   // decrease x by y until x is less than 1
+   int x;
+   int y;
+   scanf("%d %d\n", &x, &y);
+
+   while(x >= 1) {
+       printf("%d\n", x);
+       x -= y;
+   }
+}
+
+#include <stdio.h>
+#include <string.h>
+
+#define VOUELS 10
+
+int main() {
+    // count number of vouels
+    char string[100];
+    scanf("%s", string);
+
+    char vouels[VOUELS] = {'a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U'};
+
+    int counter = 0;
+    char index;
+    for(int i = 0; i < strlen(string); i += 1) {
+        index = string[i];
+        for(int j = 0; j < VOUELS; j += 1) {
+            if(index==vouels[j]){
+                counter += 1;
+            }
+        }
+    }
+    printf("%d", counter);
+}
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+    // 5 int values on each line, read info, store in array, print out values all on one line
+    FILE *fp;
+    fp = fopen("information.txt", 'r');
+
+    int information[5];
+
+    for(int i = 0; i < 5; i += 1) {
+        fscanf(fp, "%d", information[i]);
+    }
+
+    for(int i = 0; i < 5; i += 1) {
+        printf("%d", information[i]);
+    }
+}
+
+#include <stdio.h>
+// rewrite recursive function
+// int f(int i) {
+//     if (i ==1) {
+//         return(i);
+//     }
+//     else {
+//         return(i*f(i-1));
+//     }
+// }
+int f(int i) {
+    int x = i;
+    for(int j = i - 1; j > 1; j -= 1) {
+        x *= j;
+    }
+    return (x);
+}
+
+int main() {
+    int x;
+    scanf("%d", &x);
+    printf("%d", f(x))
+
+}
