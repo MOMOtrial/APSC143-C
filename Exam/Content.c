@@ -259,24 +259,15 @@ int main() {
     }
 
     // --- pointer
-
     // type *pointerName;
-
     int *arrayOfPointer[5];
     // Defines an array of 5 pointers to int values
-
-
     // malloc(size)
-
     // free(pointerToMemory)
-
     // realloc(pointerToMemory, newSize)
-
     // calloc(numberOfThings, sizeOfThing)
-
-
+    
     // FILE *fp;
-
     // fopen(fileName, mode);
 
     // r --> Reading mode(an get data, but cant add or change)
@@ -286,15 +277,12 @@ int main() {
     // w+ --> Both reading and writing mode
     // a+ --> Both reading and appending mode
 
-    //     FILE *fp;
+    //    FILE *fp;
     //    fp = fopen("exampleFile.txt", "r");
     //    fscanf(file, formatSpecifiers, adresses);
     //    fgets(string, numberOfCharacters, stream)
-
     // getc(file)
-
     // putc(character, file)
-
     // fclose(file);
     int value = 100;
     int *valuePointer = &value;
