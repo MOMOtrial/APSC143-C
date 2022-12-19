@@ -648,3 +648,60 @@ int main() {
     printf("%d", f(x))
 
 }
+#include <stdio.h>
+#include <string.h>
+
+int main(){
+    char stringIn[11]; //holds 10 char long string and null char
+    fgets(stringIn, 11, stdin); //fill the string
+    char stringA[6]; //holds 5 char long string with null char
+    char stringB[6]; //holds 5 char long string with null char
+
+    // v v v Your code here v v v
+    // Add null char to the ends of the two new strings
+    stringA[5] = '\0';
+    stringB[5] = '\0';
+    // Loop through all letters in the original string (indices 0 – 9)
+    for(int i = 0; i < 10; i++){
+        // if the letter is in the first half (indices 0 – 4) then add to stringA, otherwise StringB
+        if(i < 5){
+            stringA[i] = stringIn[i];
+        }else {
+            stringB[i-5] = stringIn[i];
+        }
+    }
+    // ^ ^ ^ Your code here ^ ^ ^
+
+    printf("original string = %s\n", stringIn);
+    printf("first string = %s\n", stringA);
+    printf("second string = %s\n", stringB);
+    return 0;
+}
+#include <stdio.h>
+
+
+int main(){
+
+    int sales[4][7];
+    for(int m=0;m<4;m++) {
+        for (int n = 0; n < 7; n++) {
+            printf("Please enter the sale for branch %d at day %d: ", m + 1, n + 1);
+            scanf("%d", &sales[m][n]);
+        }
+    }
+
+// v v v Your code here v v v
+    float sum[4]={0,0,0,0};
+    int d=0;
+    for(int i=0;i<4;i++){
+        for (int j=0;j<7;j++){
+            sum[i]=sum[i]+sales[i][j];
+        }
+        if (sum[i]>=sum[d])
+            d=i;
+    }
+// ^ ^ ^ Your code here ^ ^ ^
+
+    printf("Branch %d has sold the most this week.",d+1);
+    return 0;
+}
